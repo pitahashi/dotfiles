@@ -4,8 +4,6 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
 config.font_size = 14
-config.line_height = 1.25
-config.cell_width = 1.1
 config.font = wezterm.font_with_fallback({
 	{ family = "JetBrainsMono Nerd Font" },
 	{ family = "Hiragino Maru Gothic ProN" },
