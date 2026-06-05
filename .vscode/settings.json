@@ -1,0 +1,76 @@
+{
+  // --- Font & Typography ---
+  "editor.fontFamily": "HackGen Console NF",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 1.15,
+  "editor.letterSpacing": 0.05,
+  "editor.fontLigatures": false,
+  "breadcrumbs.enabled": true,
+
+  // --- Editor Layout ---
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.folding": false,
+  "editor.wordWrap": "on",
+  "editor.renderLineHighlight": "line",
+  "editor.scrollBeyondLastLine": false,
+  "editor.stickyScroll.enabled": false,
+  "editor.linkedEditing": true,
+  "html.autoClosingTags": true,
+  "[typescriptreact]": {
+    "js/ts.autoClosingTags.enabled": true,
+  },
+  "editor.occurrencesHighlight": "off",
+  "editor.guides.indentation": true,
+  "editor.guides.highlightActiveIndentation": true,
+  "editor.semanticHighlighting.enabled": false,
+  "editor.guides.highlightActiveBracketPair": true,
+
+  // --- Cursor ---
+  "editor.cursorBlinking": "blink",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // --- Whitespace & Guides ---
+  "editor.renderWhitespace": "trailing",
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+
+
+  // --- Workbench ---
+  "workbench.activityBar.location": "top",
+  "workbench.settings.editor": "json",
+  "workbench.tree.indent": 16,
+
+  // --- Terminal ---
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.enableKittyKeyboardProtocol": false,
+
+  // --- Files ---
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // --- Vim ---
+  "vim.scroll": 5,
+  "vim.insertModeKeyBindings": [{ "before": ["j", "j"], "after": ["<Esc>"] }],
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+
+  // --- Misc ---
+  "workbench.startupEditor": "none",
+  "inlineChat.affordance": "off",
+  "chat.disableAIFeatures": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.initialHint": false,
+  "workbench.colorTheme": "Dark+",
+
+  // --- Color Scheme ---
+  "catppuccin.italicComments": false,
+  "catppuccin.italicKeywords": false,
+  "diffEditor.experimental.showMoves": true,
+  "workbench.iconTheme": "symbols",
+  "liveServer.settings.donotShowInfoMsg": true,
+}
