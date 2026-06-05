@@ -1,9 +1,9 @@
 {
   // --- Font & Typography ---
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.fontFamily": "HackGen Console NF",
   "editor.fontSize": 14,
-  "editor.lineHeight": 1.15,
-  "editor.letterSpacing": 0.05,
+  "editor.lineHeight": 1.25,
+  "editor.letterSpacing": 0.6,
   "editor.fontLigatures": false,
   "breadcrumbs.enabled": true,
 
