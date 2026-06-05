@@ -1,8 +1,0 @@
-WRN 2026-05-03T16:55:01.848 ?.34608    server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/mFrRgj/nvim.34608.0
-WRN 2026-05-03T16:55:08.840 ?.34621    server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/RGZvVS/nvim.34621.0
-WRN 2026-05-03T21:32:26.354 ?.52393    server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/dtRpkx/nvim.52393.0
-WRN 2026-05-04T23:44:37.329 ?.4351     server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/w02sA3/nvim.4351.0
-WRN 2026-05-25T23:07:18.036 ?.6224     server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/JygQpJ/nvim.6224.0
-WRN 2026-05-25T23:07:18.036 ?.6223     server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/7YXqK1/nvim.6223.0
-WRN 2026-05-25T23:09:03.885 ?.7202     server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/YZKNaN/nvim.7202.0
-WRN 2026-05-25T23:09:23.981 ?.7540     server_start:197: Failed to start server: operation not permitted: /var/folders/cx/_hwvf2c936j631m3d_5xcj2m0000gn/T/nvim.toripone/4u8xpU/nvim.7540.0
