@@ -1,0 +1,73 @@
+{
+  "ui_font_weight": 350.0,
+  "ui_font_size": 15.0,
+  "cli_default_open_behavior": "existing_window",
+  "soft_wrap": "editor_width",
+  "languages": {
+    "JSON": {
+      "indent_guides": {
+        "line_width": 1,
+      },
+      "preferred_line_length": 80,
+      "soft_wrap": "editor_width",
+    },
+  },
+  "semantic_tokens": "off",
+  "terminal": {
+    "toolbar": {
+      "breadcrumbs": false,
+    },
+  },
+  "icon_theme": "Material Icon Theme",
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "dock": "left",
+  },
+  "auto_update_extensions": {
+    "live-server": false,
+  },
+  "lsp": {
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"],
+      },
+    },
+  },
+  "colorize_brackets": true,
+  "disable_ai": true,
+  "agent": {
+    "dock": "right",
+    "expand_terminal_card": false,
+    "expand_edit_card": false,
+    "enable_feedback": false,
+    "favorite_models": [],
+    "notify_when_agent_waiting": "never",
+    "model_parameters": [],
+  },
+  "tabs": {
+    "file_icons": true,
+  },
+  "show_wrap_guides": true,
+  "agent_ui_font_size": 15.0,
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "buffer_font_family": "HackGen35 Console NF",
+  "ui_font_family": "HackGen35 Console NF",
+  "on_last_window_closed": "quit_app",
+  "theme": "VSCode Dark Modern",
+  "buffer_font_size": 13.0,
+  "enable_language_server": true,
+  "vim_mode": true,
+}
