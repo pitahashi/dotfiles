@@ -1,0 +1,10 @@
+add_newline = true
+
+[username]
+disabled = true
+
+[hostname]
+disabled = true
+
+[time]
+disabled = true
