@@ -27,4 +27,5 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 vim.opt.showmode = true
+vim.opt.shortmess:append("I")
 require("vim._core.ui2").enable({})

@@ -13,7 +13,14 @@ return {
 			})
 
 			vim.diagnostic.config({
-				virtual_text = { spacing = 2, prefix = ">" },
+				virtual_text = { spacing = 2, source = "if_many", prefix = "●" },
+				float = {
+					border = "rounded",
+					source = "if_many",
+					header = "",
+					prefix = "",
+					focusable = false,
+				},
 				signs = {
 					text = {
 						[vim.diagnostic.severity.ERROR] = "",
@@ -69,7 +76,7 @@ return {
 					map("n", "gd", vim.lsp.buf.definition, "LSP: definition")
 					map("n", "gD", vim.lsp.buf.declaration, "LSP: declaration")
 					map("n", "gi", vim.lsp.buf.implementation, "LSP: implementation")
-					map("n", "gr", vim.lsp.buf.references, "LSP: references")
+					map("n", "gR", vim.lsp.buf.references, "LSP: references")
 					map("n", "K", vim.lsp.buf.hover, "LSP: hover")
 					map("n", "<leader>rn", vim.lsp.buf.rename, "LSP: rename")
 					map("n", "<leader>ca", vim.lsp.buf.code_action, "LSP: code action")
