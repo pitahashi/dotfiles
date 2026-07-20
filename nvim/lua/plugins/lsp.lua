@@ -11,12 +11,10 @@ return {
 			vim.lsp.config("*", {
 				capabilities = require("cmp_nvim_lsp").default_capabilities(),
 			})
-
 			vim.diagnostic.config({
-				virtual_text = { spacing = 2, source = "if_many", prefix = "●" },
+				virtual_text = { spacing = 2, prefix = "●" },
 				float = {
 					border = "rounded",
-					source = "if_many",
 					header = "",
 					prefix = "",
 					focusable = false,
@@ -80,7 +78,9 @@ return {
 					map("n", "K", vim.lsp.buf.hover, "LSP: hover")
 					map("n", "<leader>rn", vim.lsp.buf.rename, "LSP: rename")
 					map("n", "<leader>ca", vim.lsp.buf.code_action, "LSP: code action")
-					map("n", "<leader>ds", vim.diagnostic.open_float, "Diag: float")
+					map("n", "<leader>ds", function()
+						vim.diagnostic.open_float({ focusable = true }, "Diag: float")
+					end)
 					map("n", "[d", function()
 						vim.diagnostic.jump({ count = -1 })
 					end, "Diag: prev")

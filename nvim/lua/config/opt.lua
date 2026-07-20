@@ -28,4 +28,5 @@ vim.opt.smartcase = true
 
 vim.opt.showmode = true
 vim.opt.shortmess:append("I")
+vim.opt.fillchars:append({ lastline = " " })
 require("vim._core.ui2").enable({})
