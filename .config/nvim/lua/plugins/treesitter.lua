@@ -3,7 +3,6 @@ return {
 	branch = "main",
 	lazy = false,
 	build = ":TSUpdate",
-
 	config = function()
 		local parsers = {
 			"astro",
