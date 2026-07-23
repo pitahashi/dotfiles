@@ -1,5 +1,5 @@
 vim.lsp.config("ts_ls", {
-	cmd = { "typescript-language-server" },
+	cmd = { "typescript-language-server", "--stdio" },
 	filetypes = {
 		"javascript",
 		"typescript",
