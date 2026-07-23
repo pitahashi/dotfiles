@@ -64,5 +64,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 require("lsp.lua_ls")
-print("enable lua_ls")
-vim.lsp.enable("lua_ls")
+require("lsp.ts_ls")
+
+vim.lsp.enable({
+	"lua_ls",
+	"ts_ls",
+})
