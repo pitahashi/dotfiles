@@ -1,6 +1,6 @@
 # font
 font-family = "HackGen35 Console NF"
-font-size = 13.5
+font-size = 14
 font-feature = -dlig
 font-style-bold = false
 font-style-italic = false
