@@ -3,17 +3,17 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
-config.font_size = 14
+config.font_size = 16
+config.line_height = 1
 config.font = wezterm.font_with_fallback({
-	{ family = "JetBrainsMono Nerd Font" },
-	{ family = "Hiragino Maru Gothic ProN" },
+	{ family = "HackGen Console NF", weight = 500 },
 })
 
 config.adjust_window_size_when_changing_font_size = false
 config.cursor_blink_rate = 0 -- 点滅が気になるなら止める
 config.use_ime = true
-config.window_background_opacity = 0.93
-config.macos_window_background_blur = 40
+-- config.window_background_opacity = 0.80
+-- config.macos_window_background_blur = 10
 config.window_decorations = "RESIZE"
 config.hide_tab_bar_if_only_one_tab = true
 config.tab_bar_at_bottom = false
