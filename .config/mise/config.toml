@@ -1,0 +1,10 @@
+[tools]
+"aqua:LuaLS/lua-language-server" = "latest"
+"cargo:stylua" = "latest"
+"go:golang.org/x/tools/gopls" = "latest"
+node = "26"
+"npm:@fsouza/prettierd" = "latest"
+"npm:@tailwindcss/language-server" = "latest"
+"npm:oxfmt" = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
