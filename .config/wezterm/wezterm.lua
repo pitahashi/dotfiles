@@ -3,10 +3,10 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 config.automatically_reload_config = true
 
-config.font_size = 16
+config.font_size = 14
 config.line_height = 1
 config.font = wezterm.font_with_fallback({
-	{ family = "HackGen Console NF", weight = 500 },
+	{ family = "HackGen35 Console NF", weight = 500 },
 })
 
 config.adjust_window_size_when_changing_font_size = false
@@ -21,7 +21,6 @@ config.use_fancy_tab_bar = false
 
 config.initial_cols = 90
 config.initial_rows = 25
-config.color_scheme = "Solarized (dark) (terminal.sexy)"
 config.colors = {
 	tab_bar = {
 		background = "none",
