@@ -12,6 +12,7 @@ config.font = wezterm.font_with_fallback({
 config.adjust_window_size_when_changing_font_size = false
 config.cursor_blink_rate = 0 -- 点滅が気になるなら止める
 config.use_ime = true
+config.color_scheme = "Pastel White (terminal.sexy)"
 -- config.window_background_opacity = 0.80
 -- config.macos_window_background_blur = 10
 config.window_decorations = "RESIZE"
