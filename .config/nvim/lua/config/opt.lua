@@ -10,6 +10,7 @@ vim.opt.updatetime = 250
 vim.opt.winborder = "rounded"
 
 vim.opt.laststatus = 3
+vim.opt.cmdheight = 0
 vim.opt.number = true
 vim.opt.relativenumber = false
 vim.opt.cursorline = true
