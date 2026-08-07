@@ -2,7 +2,17 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 autoload -Uz compinit
+autoload -U colors && colors
 compinit
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' formats ' (%b)'
+
+setopt PROMPT_SUBST
+PROMPT='%F{green}%n@%m%f %F{blue}%~%f${vcs_info_msg_0_} 
+> '
 alias g='git'
 alias lg='lazygit'
 alias vim='nvim'
@@ -14,12 +24,9 @@ alias cur='cursor'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors ''
 
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-export PATH="$HOME/.local/bin:$PATH"
-export HOMEBREW_PREFIX=/opt/homebrew
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+export CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL=1
 eval "$(zoxide init zsh)"
-eval "$(~/.local/bin/mise activate zsh)"
-eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
