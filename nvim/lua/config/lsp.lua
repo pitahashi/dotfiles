@@ -8,7 +8,7 @@ vim.diagnostic.config({
 		border = "rounded",
 		header = "",
 		prefix = "",
-		focusable = false,
+		focusable = true,
 	},
 	signs = {
 		text = {
