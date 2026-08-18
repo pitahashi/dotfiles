@@ -2,12 +2,14 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
-config.font_size = 14.0
+config.font_size = 15.0
 config.use_ime = true
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 20
-config.color_scheme = "AdventureTime"
-
+config.color_scheme = "Solarized (dark) (terminal.sexy)"
+config.font = wezterm.font_with_fallback({
+	{ family = "Firge35Nerd Console", weight = "Medium" },
+})
+config.initial_cols = 120
+config.initial_rows = 40
 ----------------------------------------------------
 -- Tab
 ----------------------------------------------------
@@ -28,7 +30,7 @@ config.window_frame = {
 
 -- タブバーを背景色に合わせる
 config.window_background_gradient = {
-	colors = { "#191919" },
+	colors = { "#122837" },
 }
 
 -- タブの追加ボタンを非表示
@@ -79,6 +81,6 @@ end)
 config.disable_default_key_bindings = true
 config.keys = require("keybinds").keys
 config.key_tables = require("keybinds").key_tables
-config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
+config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 2000 }
 
 return config
