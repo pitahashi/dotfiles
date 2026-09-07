@@ -177,7 +177,7 @@ require("lazy").setup({
 			config = function()
 				require("nightfox").setup({
 					options = {
-						transparent = true,
+						transparent = false,
 						styles = {
 							comments = "italic",
 							keywords = "italic",
@@ -185,6 +185,18 @@ require("lazy").setup({
 					},
 				})
 				vim.cmd("colorscheme nightfox")
+				vim.api.nvim_set_hl(0, "SnacksPickerFile", { fg = "#cdcecf" })
+				vim.api.nvim_set_hl(0, "SnacksPickerDir", { fg = "#7b8496" })
+
+				vim.api.nvim_set_hl(0, "@variable", { fg = "#79dbb5" })
+				vim.api.nvim_set_hl(0, "@variable.builtin", { fg = "#79dbb5", italic = true })
+				vim.api.nvim_set_hl(0, "@parameter", { fg = "#c94f6d" })
+				vim.api.nvim_set_hl(0, "@variable.parameter", { fg = "#c94f6d" })
+				vim.api.nvim_set_hl(0, "@function", { fg = "#dbc074", bold = true })
+				vim.api.nvim_set_hl(0, "@function.call", { fg = "#dbc074", bold = true })
+				vim.api.nvim_set_hl(0, "@function.builtin", { fg = "#f4a261", bold = true })
+				vim.api.nvim_set_hl(0, "@function.method", { fg = "#dbc074", bold = true })
+				vim.api.nvim_set_hl(0, "@function.method.call", { fg = "#dbc074", bold = true })
 			end,
 		},
 		{
