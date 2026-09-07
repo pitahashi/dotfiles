@@ -170,21 +170,21 @@ require("lazy").setup({
 			end,
 		},
 		{
-			"craftzdog/solarized-osaka.nvim",
-			name = "solarized-osaka",
+			"EdenEast/nightfox.nvim",
 			cond = not vim.g.vscode,
 			lazy = false,
 			priority = 1000,
 			config = function()
-				require("solarized-osaka").setup({
-					styles = {
-						italic = false,
-						transparency = true,
-						comments = { italic = true },
-						keywords = { italic = true },
+				require("nightfox").setup({
+					options = {
+						transparent = true,
+						styles = {
+							comments = "italic",
+							keywords = "italic",
+						},
 					},
 				})
-				vim.cmd("colorscheme solarized-osaka")
+				vim.cmd("colorscheme nightfox")
 			end,
 		},
 		{
@@ -610,9 +610,20 @@ vim.lsp.config("ts_ls", {
 	},
 })
 
+vim.lsp.config("gopls", {
+	cmd = { "gopls" },
+	filetypes = { "go", "gomod", "gowork", "gotmpl" },
+	root_markers = {
+		"go.work",
+		"go.mod",
+		".git",
+	},
+})
+
 vim.lsp.enable({
 	"lua_ls",
 	"ts_ls",
+	"gopls",
 })
 
 -- Autocommands
