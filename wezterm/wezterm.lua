@@ -28,11 +28,6 @@ config.window_frame = {
 	active_titlebar_bg = "none",
 }
 
--- タブバーを背景色に合わせる
-config.window_background_gradient = {
-	colors = { "#122837" },
-}
-
 -- タブの追加ボタンを非表示
 config.show_new_tab_button_in_tab_bar = false
 -- nightlyのみ使用可能
