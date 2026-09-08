@@ -4,9 +4,9 @@ local config = wezterm.config_builder()
 config.automatically_reload_config = true
 config.font_size = 15.0
 config.use_ime = true
-config.color_scheme = "Solarized (dark) (terminal.sexy)"
+config.color_scheme = "nightfox"
 config.font = wezterm.font_with_fallback({
-	{ family = "Firge35Nerd Console", weight = "Medium" },
+	{ family = "HackGen35 Console NF", weight = "Medium" },
 })
 config.initial_cols = 120
 config.initial_rows = 40
