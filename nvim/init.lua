@@ -506,6 +506,23 @@ require("lazy").setup({
 				})
 			end,
 		},
+			{
+				"delphinus/md-render.nvim",
+				version = "*",
+				ft = "markdown",
+				dependencies = {
+					{ "delphinus/budoux.lua", version = "*" },
+				},
+				keys = {
+					{
+						"<leader>mp",
+						"<Plug>(md-render-toggle)",
+						ft = "markdown",
+						remap = true,
+						desc = "Markdown: toggle preview",
+					},
+				},
+			},
 	},
 	{
 		"folke/which-key.nvim",
