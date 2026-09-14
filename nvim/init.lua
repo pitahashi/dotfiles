@@ -170,12 +170,12 @@ require("lazy").setup({
 			end,
 		},
 		{
-			"EdenEast/nightfox.nvim",
+			"craftzdog/solarized-osaka.nvim",
 			cond = not vim.g.vscode,
 			lazy = false,
 			priority = 1000,
 			config = function()
-				require("nightfox").setup({
+				require("solarized-osaka").setup({
 					options = {
 						transparent = false,
 						styles = {
@@ -183,20 +183,22 @@ require("lazy").setup({
 							keywords = "italic",
 						},
 					},
-				})
-				vim.cmd("colorscheme nightfox")
-				vim.api.nvim_set_hl(0, "SnacksPickerFile", { fg = "#cdcecf" })
-				vim.api.nvim_set_hl(0, "SnacksPickerDir", { fg = "#7b8496" })
+					on_highlights = function(hl, c)
+						hl["SnacksPickerFile"] = { fg = c.fg }
+						hl["SnacksPickerDir"] = { fg = c.base01 }
 
-				vim.api.nvim_set_hl(0, "@variable", { fg = "#79dbb5" })
-				vim.api.nvim_set_hl(0, "@variable.builtin", { fg = "#79dbb5", italic = true })
-				vim.api.nvim_set_hl(0, "@parameter", { fg = "#c94f6d" })
-				vim.api.nvim_set_hl(0, "@variable.parameter", { fg = "#c94f6d" })
-				vim.api.nvim_set_hl(0, "@function", { fg = "#dbc074", bold = true })
-				vim.api.nvim_set_hl(0, "@function.call", { fg = "#dbc074", bold = true })
-				vim.api.nvim_set_hl(0, "@function.builtin", { fg = "#f4a261", bold = true })
-				vim.api.nvim_set_hl(0, "@function.method", { fg = "#dbc074", bold = true })
-				vim.api.nvim_set_hl(0, "@function.method.call", { fg = "#dbc074", bold = true })
+						hl["@variable"] = { fg = c.blue400 }
+						hl["@variable.builtin"] = { fg = c.blue400, italic = true }
+						hl["@parameter"] = { fg = c.red400 }
+						hl["@variable.parameter"] = { fg = c.red400 }
+						hl["@function"] = { fg = c.blue600, bold = true }
+						hl["@function.call"] = { fg = c.blue600, bold = true }
+						hl["@function.builtin"] = { fg = c.orange400, bold = true }
+						hl["@function.method"] = { fg = c.blue600, bold = true }
+						hl["@function.method.call"] = { fg = c.blue600, bold = true }
+					end,
+				})
+				vim.cmd("colorscheme solarized-osaka")
 			end,
 		},
 		{
@@ -506,23 +508,23 @@ require("lazy").setup({
 				})
 			end,
 		},
-			{
-				"delphinus/md-render.nvim",
-				version = "*",
-				ft = "markdown",
-				dependencies = {
-					{ "delphinus/budoux.lua", version = "*" },
-				},
-				keys = {
-					{
-						"<leader>mp",
-						"<Plug>(md-render-toggle)",
-						ft = "markdown",
-						remap = true,
-						desc = "Markdown: toggle preview",
-					},
+		{
+			"delphinus/md-render.nvim",
+			version = "*",
+			ft = "markdown",
+			dependencies = {
+				{ "delphinus/budoux.lua", version = "*" },
+			},
+			keys = {
+				{
+					"<leader>mp",
+					"<Plug>(md-render-toggle)",
+					ft = "markdown",
+					remap = true,
+					desc = "Markdown: toggle preview",
 				},
 			},
+		},
 	},
 	{
 		"folke/which-key.nvim",
