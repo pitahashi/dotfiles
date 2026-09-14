@@ -2,11 +2,11 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.automatically_reload_config = true
-config.font_size = 15.0
+config.font_size = 16.0
 config.use_ime = true
-config.color_scheme = "nightfox"
+config.color_scheme = "Solarized (dark) (terminal.sexy)"
 config.font = wezterm.font_with_fallback({
-	{ family = "HackGen35 Console NF", weight = "Medium" },
+	{ family = "Firge35Nerd Console", weight = "Medium" },
 })
 config.initial_cols = 120
 config.initial_rows = 40
@@ -36,6 +36,7 @@ config.show_close_tab_button_in_tabs = false
 
 -- タブ同士の境界線を非表示
 config.colors = {
+	background = "#191919",
 	tab_bar = {
 		inactive_tab_edge = "none",
 	},
