@@ -11,7 +11,6 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.wrap = true
 vim.opt.confirm = true
-vim.opt.colorcolumn = "80"
 vim.opt.ruler = true
 vim.opt.termguicolors = true
 vim.opt.updatetime = 250
@@ -177,25 +176,18 @@ require("lazy").setup({
 			config = function()
 				require("solarized-osaka").setup({
 					options = {
-						transparent = false,
+						transparent = true,
 						styles = {
-							comments = "italic",
-							keywords = "italic",
+							comments = { italic = false },
+							keywords = { italic = false },
+							functions = { italic = false },
+							variables = { italic = false },
 						},
 					},
 					on_highlights = function(hl, c)
 						hl["SnacksPickerFile"] = { fg = c.fg }
 						hl["SnacksPickerDir"] = { fg = c.base01 }
-
-						hl["@variable"] = { fg = c.blue400 }
-						hl["@variable.builtin"] = { fg = c.blue400, italic = true }
-						hl["@parameter"] = { fg = c.red400 }
-						hl["@variable.parameter"] = { fg = c.red400 }
-						hl["@function"] = { fg = c.blue600, bold = true }
-						hl["@function.call"] = { fg = c.blue600, bold = true }
-						hl["@function.builtin"] = { fg = c.orange400, bold = true }
-						hl["@function.method"] = { fg = c.blue600, bold = true }
-						hl["@function.method.call"] = { fg = c.blue600, bold = true }
+						hl["@variable"] = { fg = c.blue500 }
 					end,
 				})
 				vim.cmd("colorscheme solarized-osaka")
@@ -507,23 +499,6 @@ require("lazy").setup({
 					end,
 				})
 			end,
-		},
-		{
-			"delphinus/md-render.nvim",
-			version = "*",
-			ft = "markdown",
-			dependencies = {
-				{ "delphinus/budoux.lua", version = "*" },
-			},
-			keys = {
-				{
-					"<leader>mp",
-					"<Plug>(md-render-toggle)",
-					ft = "markdown",
-					remap = true,
-					desc = "Markdown: toggle preview",
-				},
-			},
 		},
 	},
 	{
