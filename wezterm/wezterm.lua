@@ -5,8 +5,10 @@ config.automatically_reload_config = true
 config.font_size = 16.0
 config.use_ime = true
 config.color_scheme = "Solarized (dark) (terminal.sexy)"
+config.window_background_opacity = 0.8
+config.macos_window_background_blur = 20
 config.font = wezterm.font_with_fallback({
-	{ family = "Firge35Nerd Console", weight = "Medium" },
+	{ family = "HackGen35 Console NF", weight = "Medium" },
 })
 config.initial_cols = 120
 config.initial_rows = 40
@@ -36,7 +38,7 @@ config.show_close_tab_button_in_tabs = false
 
 -- タブ同士の境界線を非表示
 config.colors = {
-	background = "#191919",
+	background = "#1E1E1E",
 	tab_bar = {
 		inactive_tab_edge = "none",
 	},
