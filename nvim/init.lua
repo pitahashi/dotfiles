@@ -16,8 +16,8 @@ vim.opt.termguicolors = true
 vim.opt.updatetime = 250
 vim.opt.winborder = "rounded"
 
-vim.opt.laststatus = 3
-vim.opt.cmdheight = 0
+vim.opt.laststatus = 2
+vim.opt.cmdheight = 1
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.cursorline = true
@@ -68,6 +68,26 @@ vim.opt.rtp:prepend(lazypath)
 -- Plugins
 require("lazy").setup({
 	spec = {
+		{
+			"chomosuke/typst-preview.nvim",
+			commit = "1c2e19486397be1c580b560fc50ee36abe329c46",
+			pin = true,
+			ft = "typst",
+			cmd = { "TypstPreview", "TypstPreviewStop", "TypstPreviewToggle" },
+			keys = {
+				{ "<leader>tp", "<cmd>TypstPreviewToggle<cr>", ft = "typst", desc = "Typst: toggle preview" },
+				{ "<leader>ts", "<cmd>TypstPreviewStop<cr>", ft = "typst", desc = "Typst: stop preview" },
+			},
+			opts = {
+				-- Keep all preview servers local to this machine.
+				host = "127.0.0.1",
+				-- Use Homebrew-managed binaries; disable plugin binary downloads.
+				dependencies_bin = {
+					tinymist = "/opt/homebrew/bin/tinymist",
+					websocat = "/opt/homebrew/bin/websocat",
+				},
+			},
+		},
 		{
 			"windwp/nvim-autopairs",
 			event = "InsertEnter",
@@ -188,6 +208,7 @@ require("lazy").setup({
 						hl["SnacksPickerFile"] = { fg = c.fg }
 						hl["SnacksPickerDir"] = { fg = c.base01 }
 						hl["@variable"] = { fg = c.blue500 }
+						hl.BufferCurrent = { bg = c.base02 }
 					end,
 				})
 				vim.cmd("colorscheme solarized-osaka")
@@ -601,8 +622,8 @@ vim.lsp.config("lua_ls", {
 	},
 })
 
-vim.lsp.config("ts_ls", {
-	cmd = { "typescript-language-server", "--stdio" },
+vim.lsp.config("ts", {
+	cmd = { "pnpm", "exec", "tsc", "--lsp", "--stdio" },
 	filetypes = {
 		"javascript",
 		"typescript",
@@ -610,8 +631,10 @@ vim.lsp.config("ts_ls", {
 		"typescriptreact",
 	},
 	root_markers = {
-		"tsconfig.json",
-		"package.json",
+		"pnpm-lock.yaml",
+		"yarn.lock",
+		"bun.lock",
+		"package-lock.json",
 		".git",
 	},
 })
@@ -628,7 +651,7 @@ vim.lsp.config("gopls", {
 
 vim.lsp.enable({
 	"lua_ls",
-	"ts_ls",
+	"ts",
 	"gopls",
 })
 
