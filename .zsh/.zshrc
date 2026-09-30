@@ -6,7 +6,6 @@ export LC_ALL=en_US.UTF-8
 autoload -Uz compinit
 compinit -C
 zstyle ':completion:*' menu select
-zstyle ':completion:*' list-colors ''
 
 # Pure
 autoload -U promptinit
@@ -32,3 +31,4 @@ export CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL=1
 # Execute
 eval "$(zoxide init zsh)"
 eval "$(mise activate zsh)"
+eval "$(/opt/homebrew/bin/zsh-patina activate)"
