@@ -1,6 +1,8 @@
+
+theme = "Solarized Dark Patched" 
 # font
 font-family = "HackGen35 Console NF"
-font-size = 14
+font-size = 13.5
 font-feature = -dlig
 font-style-bold = false
 font-style-italic = false
@@ -12,14 +14,9 @@ adjust-cell-height = 10%
 # keybind
 keybind = global:ctrl+backquote=toggle_quick_terminal
 
-# titlebar
-macos-titlebar-style = hidden
-macos-window-shadow = false
-macos-titlebar-proxy-icon = hidden
-
 # window
-window-width = 130
-window-height = 40
+window-width = 110
+window-height = 30
 window-padding-x = 10
 window-padding-y = 10
 window-padding-balance = true
