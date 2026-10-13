@@ -322,6 +322,10 @@ require("lazy").setup({
 						hl = "SnacksIndentChunk",
 					},
 				},
+				explorer = {
+					enabled = true,
+					replace_netrw = true,
+				},
 				picker = {
 					enabled = false,
 					hidden = true,
@@ -342,6 +346,12 @@ require("lazy").setup({
 				},
 			},
 			keys = {
+				{
+					"<leader>e",
+					function()
+						require("snacks").picker.explorer()
+					end,
+				},
 				{
 					"ff",
 					function()
