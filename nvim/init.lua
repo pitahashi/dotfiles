@@ -37,10 +37,27 @@ vim.opt.smartcase = true
 vim.opt.showmode = true
 vim.opt.shortmess:append("I")
 vim.opt.fillchars:append({ lastline = " " })
+
+vim.api.nvim_create_user_command("CopyMessages", function()
+	local messages = vim.fn.execute("messages")
+	vim.fn.setreg("+", messages)
+	print("Copied Messages to clipboard")
+end, {
+	desc = "Copy NVIM Messages to clipboard",
+})
+
+vim.api.nvim_create_user_command("CopyAll", function()
+	local lines = vim.api.nvim_buf_get_lines(0, 0, -1, false)
+	vim.fn.setreg("+", table.concat(lines, "\n"))
+end, {
+	desc = "Copy the entire buffer to clipboard",
+})
+
 require("vim._core.ui2").enable({})
 
 -- Keymaps
 local keymap_opts = { noremap = true, silent = true }
+vim.keymap.set("n", "<leader>cm", "<cmd>CopyMessages<cr>")
 vim.keymap.set("i", "jj", "<esc>")
 vim.keymap.set("n", "<esc><esc>", ":nohl<CR>")
 vim.keymap.set("n", "<C-u>", "15k", keymap_opts)
@@ -547,7 +564,7 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.config("ts", {
-	cmd = { "pnpm", "exec", "tsc", "--lsp", "--stdio" },
+	cmd = { "typescript-language-server", "--stdio" },
 	filetypes = {
 		"javascript",
 		"typescript",
