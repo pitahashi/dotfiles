@@ -11,6 +11,8 @@ zstyle ':completion:*' menu select
 autoload -U promptinit
 promptinit
 prompt pure
+PURE_PROMPT_SYMBOL='❯'
+zstyle ':prompt:pure:prompt:success' color 2
 
 # Alias
 alias g='git'
@@ -21,6 +23,7 @@ alias ll='eza -lh --icons --git'
 alias la='eza -lah --icons --git'
 alias tree='eza --tree --icons'
 alias tm='tmux'
+alias lzd='lazydocker'
 
 # Plugins
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
