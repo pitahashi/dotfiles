@@ -1,0 +1,64 @@
+{
+  "editor.stickyScroll.enabled": false,
+  "editor.folding": false,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "workbench.browser.openLocalhostLinks": false,
+  "files.associations": {
+    "*.ejs": "html"
+  },
+  "emmet.includeLanguages": {
+    "ejs": "html"
+  },
+  "search.exclude": {
+    "**/node_modules": true
+  },
+  "html.format.templating": true,
+  "html.validate.scripts": false,
+  "breadcrumbs.enabled": false,
+  "vim.hlsearch": true,
+  "window.nativeTabs": false,
+  "workbench.activityBar.location": "top",
+  "workbench.editor.showIcons": true,
+  "workbench.sideBar.location": "left",
+  "editor.renderLineHighlight": "line",
+  "editor.minimap.enabled": false,
+  "editor.glyphMargin": false,
+  "editor.selectionHighlight": true,
+  "editor.scrollbar.verticalScrollbarSize": 4,
+  "editor.scrollbar.horizontalScrollbarSize": 4,
+  "editor.formatOnSaveMode": "file",
+  "editor.wordWrap": "on",
+  "git.suggestSmartCommit": false,
+  "workbench.startupEditor": "none",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.fontSize": 15,
+  "editor.fontFamily": "HackGen35 Console NF",
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "editor.semanticHighlighting.enabled": false,
+  "editor.largeFileOptimizations": false,
+  "window.commandCenter": false,
+  "files.exclude": {
+    "**/.git": false
+  },
+  "json.schemas": [],
+  "workbench.settings.applyToAllProfiles": [],
+  "workbench.settings.editor": "json",
+  "window.restoreWindows": "none",
+  "workbench.colorTheme": "Dark Modern",
+  "workbench.layoutControl.enabled": false
+}
